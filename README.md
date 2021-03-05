@@ -15,9 +15,12 @@ git clone https://github.com/RockStoneStudios/Proyecto3.git .
 - 3 - Creando base de datos Abrir XAMPP y asegurarse que el puerto sobre el cual se está ejecutando es el 3306 Inicializar los servicios de Apache y MySQL Abrir el panel de control del servicio MySQL Generar una nueva base de datos llamada delilah_resto desde el panel de control
 - 4 - Iniciando el servidor Desde la terminal poner el siguiente comando : npm start
 - 5 - para cargar Usuarios-Iniciales ve a Postman y en (Post) http://localhost:3000/cargarUsuarios
--6 - luego logueate en postman en (Post) http://localhost:3000/usuario/login
+- 6 - luego logueate en postman en (Post) http://localhost:3000/usuario/login con el admin = {
+    "email" : "RockStoneStudios666@gmail.com",
+    "password" : "3508436568Omar"
+}
 - 7 - luego carga Productos-Iniciales en Postman y en (Post) http://localhost:3000/cargarProductos
-- 8- luego de estos pasos para crear pedido  (Post) direccion : http://localhost:3000/pedido en el body por ejemplo  "ProductoId" : [1,2], "cantidad" :[1,1] , "metodo_pago" :"Efectivo" 
+- 8 - luego de estos pasos para crear pedido  (Post) direccion : http://localhost:3000/pedido en el body por ejemplo  "ProductoId" : [1,2], "cantidad" :[1,1] , "metodo_pago" :"Efectivo" 
   
 
 - 5 - Listo para usar! Testear los endpoints provistos desde postman para poder hacer uso de la API y base de datos generadas
