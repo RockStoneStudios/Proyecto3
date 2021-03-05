@@ -12,7 +12,7 @@ Instalación e inicializacion del proyecto
 git clone https://github.com/RockStoneStudios/Proyecto3.git .
 
 - 2 - Instalación de dependencias npm install 
-- 3 - Creando base de datos Abrir XAMPP y asegurarse que el puerto sobre el cual se está ejecutando es el 3306 Inicializar los servicios de Apache y MySQL Abrir el panel de control del servicio MySQL Generar una nueva base de datos llamada delilah_resto desde el panel de control
+- 3 - Creando base de datos Abrir XAMPP y asegurarse que el puerto sobre el cual se está ejecutando es el 3306 Inicializar los servicios de Apache y MySQL Abrir el panel de control del servicio MySQL Generar una nueva base de datos llamada delilah-resto desde el panel de control
 - 4 - Iniciando el servidor Desde la terminal poner el siguiente comando : npm start
 - 5 - para cargar Usuarios-Iniciales ve a Postman y en (Post) http://localhost:3000/cargarUsuarios
 - 6 - luego logueate en postman en (Post) http://localhost:3000/usuario/login con el admin = {
