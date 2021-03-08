@@ -52,7 +52,7 @@ paths:
     get:
       tags:
         - Usuarios
-      summary: Obtiene usuario por id de Usuario
+      summary: Obtiene usuario por id de Usuario solo (Admin)
       description: Obtener usuario
       security:
         - autenticacionJWT: []
@@ -399,10 +399,10 @@ components:
       properties:
         email:
           type: string
-          example: javi
+          example: "RockStoneStudios666@gmail.com"
         password:
           type: string
-          example: MySecretPass123!!
+          example: 3508436568Omar
     Producto:
       type: object
       properties:
