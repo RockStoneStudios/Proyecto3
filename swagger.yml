@@ -14,7 +14,7 @@ tags:
   - name: Pedidos
     description: CRUD PEDIDOS
 paths:
-  /usuarios:
+  /usuario:
     get:
       tags:
         - Usuarios
@@ -41,14 +41,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Usuario"
+              $ref: "#/components/schemas/usuario"
         required: true
       responses:
         '200':
           description: Usuario creado
         '400':
           description: No se pudo crear el usuario
-  /usuarios/:{id}:
+  /usuario/:{id}:
     get:
       tags:
         - Usuarios
@@ -87,7 +87,7 @@ paths:
           description: Acceso Denegado
         400:
           description: No se encontro usuario
-  /usuarios/id:
+  /usuario/{id}:
     put:
       tags:
         - Usuarios
@@ -108,7 +108,7 @@ paths:
           description: Acceso Denegado
         400:
           description: No se encontro usuario
-  /usuarios/login:
+  /usuario/login:
     post:
       tags:
         - Usuarios
@@ -133,7 +133,7 @@ paths:
           description: Usuario o password invalidos
         402:
           description: Faltan campos en el objeto
-  /productos:
+  /producto:
     get:
       tags:
         - Productos
@@ -171,7 +171,7 @@ paths:
                 $ref: "#/components/schemas/Producto"
         400:
           description: No se pudo crear el producto
-  /productos/:{id}:
+  /producto/:{id}:
     get:
       tags:
         - Productos
@@ -240,7 +240,7 @@ paths:
           description: No se encontro ID
         401:
           description: Acceso Denegado
-  /pedidos:
+  /pedido:
     get:
       tags:
         - Pedidos
@@ -276,7 +276,7 @@ paths:
           description: Ha ocurrido un error
         401:
           description: Sin Stock
-  /pedidos/:{id}:
+  /pedido/:{id}:
     get:
       tags:
         - Pedidos
@@ -342,9 +342,7 @@ components:
     Usuario:
       type: object
       properties:
-        usuario:
-          type: string
-          example: javi
+        
         username:
           type: string
           example: Javier
@@ -363,6 +361,9 @@ components:
         password:
           type: string
           example: MySecretPass123!!
+        admin: 
+         type : boolean
+         example : false
     UsuarioInfo:
       type: array
       items:
@@ -371,9 +372,7 @@ components:
           id:
             type: integer
             example: 1
-          usuario:
-            type: string
-            example: javi
+         
           username:
             type: string
             example: Javier
@@ -412,7 +411,7 @@ components:
           example: Hamburguesa
         description:
           type: string
-          example: rica Hamburgesa doble carne
+          example: rica Hamburguesa doble carne
         price:
           type: double
           example: 11000

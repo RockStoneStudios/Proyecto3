@@ -4,7 +4,7 @@ const Producto = require('../Models/Productos');
 
 // Crear Producto 
 
-router.post('/register',security.autorizarUsuario, async(req,res)=>{
+router.post('/',security.autorizarUsuario, async(req,res)=>{
     if(req.admin){
         const {name,description,price,image,stock} = req.body;
         if(name.length<=0) return res.status(400).json({message : "Debe Ingresar un nombre para el producto!!"});

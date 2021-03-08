@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../Config/config');
 
 // Crear Usuario
-router.post('/register', async(req,res)=>{
+router.post('/', async(req,res)=>{
     const{username, fullname,email,phone,address, password,admin} = req.body;
     if(password.length<8) return res.status(400).json({message : "El Password debe tener por lo menos 8 caracteres"});
     console.log(email.includes('@'));
