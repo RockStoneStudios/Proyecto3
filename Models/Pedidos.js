@@ -13,10 +13,7 @@ Pedidos.init({
     },
      
      metodo_pago : DataTypes.STRING,
-     status : {
-         type : DataTypes.STRING,
-         defaultValue : "new"
-     },
+     
      total_pedido : DataTypes.INTEGER
 },{
     sequelize,

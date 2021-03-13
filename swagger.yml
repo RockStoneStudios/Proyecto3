@@ -41,7 +41,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/usuario"
+              $ref: "#/components/schemas/Usuario"
         required: true
       responses:
         '200':

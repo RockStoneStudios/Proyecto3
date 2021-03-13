@@ -119,7 +119,7 @@ router.get('/',security.autorizarUsuario,async(req,res)=>{
    const pedido = await Pedidos.findAll({
        where : {UsuarioId : req.id},
        attributes : {
-           exclude : ['createdAt','updatedAt','status','EstadoId','UsuarioId']
+           exclude : ['createdAt','updatedAt','EstadoId','UsuarioId']
        },
        include : [ {
            model : Tabla_Pedidos,
@@ -177,7 +177,7 @@ router.delete('/:id',security.autorizarUsuario,async(req,res)=>{
         where : {id : req.params.id}
     });
       if(eliminarPedido !=0) return res.status(200).json({message : `Pedido Numero ${req.params.id} Borrado con Exito`});
-      res.status(400).json({message : "No seencontro Usuario por Id"})
+      res.status(400).json({message : "No se encontro Usuario por Id"})
 });
 
 // Actualizar Estados
