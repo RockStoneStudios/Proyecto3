@@ -310,11 +310,14 @@ paths:
           in: path
           description: ID de pedido a actualizar estado
           required: true
-          schema:
-            type: integer
+          type: integer
       responses:
         200:
           description: Producto paso de {estado1} a {estado2}
+          content :
+            application/json:
+              schema: 
+                $ref: "#components/schemas/Pedidos"
         400:
           description: No se encontro ID
     delete:
@@ -437,7 +440,7 @@ components:
         metodo_pago:
           type: string
           example: Efectivo 
-      Pedidos:
+    Pedidos:
         type: object
         properties:
           "Nro Pedido":
