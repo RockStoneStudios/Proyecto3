@@ -187,6 +187,7 @@ router.put('/:id',security.autorizarUsuario,async(req,res)=>{
        const consulta = await Pedidos.findOne({
            where : {id : req.params.id}
        });
+        if(!consulta) return   res.status(400).json({message : "No se Encontro Id"});
        if(consulta.EstadoId == 5) return res.status(200).json({message : "Este Pedido ya fue entregado"});
 
        const pedido = await Pedidos.update({EstadoId : (consulta.EstadoId+1)},{
@@ -201,9 +202,11 @@ router.put('/:id',security.autorizarUsuario,async(req,res)=>{
            where : {id : (consulta.EstadoId+1)}
        });
 
-       if(pedido[0]) return res.status(200).json({message : `El Pedido # ${req.params.id} paso de ${preconsulta.estados} a ${postconsulta.estados}` });
-       res.status(400).json({message : "No se Encontro Id"});
+       if(pedido[0] !==0) return res.status(200).json({message : `El Pedido # ${req.params.id} paso de ${preconsulta.estados} a ${postconsulta.estados}` });
+      
+      
 
+       
 
 })
 

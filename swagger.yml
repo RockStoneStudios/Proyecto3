@@ -375,16 +375,16 @@ components:
          
           username:
             type: string
-            example: Javier
+            example: Omar
           fullname:
             type: string
-            example: Paz
+            example: Ortiz Jimenez
           email:
             type: string
-            example: javi@gmail.com
+            example: RockStoneStudios666@gmail.com
           phone:
             type: string
-            example: 5491122223333
+            example: +54 3508432033
           address:
             type: string
             example: Fake St. 123
@@ -463,7 +463,7 @@ components:
           example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
       
   securitySchemes:
-    bearerAuth:
+     token:
       type: http
       scheme: bearer
       bearerFormat: JWT
